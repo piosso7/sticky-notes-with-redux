@@ -1,0 +1,23 @@
+.stickyNotes {
+  width: 100%;
+  height: 80%;
+}
+
+.stickyNotes div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stickyNotes .sticky {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 30px;
+}

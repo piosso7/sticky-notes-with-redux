@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addSticky, removeSticky } from "../redux/reducer";
+import style from "../addStickyStyle.css";
 
 const mapStateToProps = (state) => {
   return {
@@ -22,7 +23,7 @@ const StickyNotesAdd = (props) => {
   };
 
   return (
-    <div className="stickyNotes">
+    <div style={style} className="stickyNotesAdd">
       <input type="text" onChange={(e) => handleChange(e)} value={sticky} />
       <button
         onClick={() => {

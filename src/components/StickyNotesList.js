@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { removeSticky } from "../redux/reducer";
+import style from "../stickyStyle.css";
 
 const mapStateToProps = (state) => {
   return {
@@ -16,11 +17,11 @@ const mapDispatchToProps = (dispatch) => {
 
 const StickyNotesList = (props) => {
   return (
-    <div className="stickyNotes">
+    <div style={style} className="stickyNotes">
       <div>
         {props.stickynotes.map((item) => {
           return (
-            <div key={item.id}>
+            <div key={item.id} className="sticky">
               <p>{item.item}</p>
               <button onClick={() => props.removeSticky(item.id)}>
                 Delete
